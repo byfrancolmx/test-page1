@@ -34,22 +34,22 @@ export interface Category {
 export const CATEGORIES: Category[] = [
   {
     name: "Guitarras Eléctricas",
-    subcategories: ["Fender", "Gibson", "Ibanez", "PRS"]
+    subcategories: ["Fender", "Gibson", "Ibanez", "PRS"],
   },
   {
     name: "Bajos",
-    subcategories: ["Fender", "Music Man", "Yamaha", "Warwick"]
+    subcategories: ["Fender", "Music Man", "Yamaha", "Warwick"],
   },
   {
     name: "Baterías",
-    subcategories: ["Pearl", "Tama", "DW", "Yamaha"]
+    subcategories: ["Pearl", "Tama", "DW", "Yamaha"],
   },
   {
     name: "Accesorios Guitarras",
-    subcategories: ["Cuerdas", "Púas", "Cables", "Pedales"]
+    subcategories: ["Cuerdas", "Púas", "Cables", "Pedales"],
   },
   {
     name: "Accesorios Baterías",
-    subcategories: ["Platillos", "Baquetas", "Parches", "Hardware"]
-  }
+    subcategories: ["Platillos", "Baquetas", "Parches", "Hardware"],
+  },
 ];
