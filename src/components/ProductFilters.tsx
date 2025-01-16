@@ -1,5 +1,5 @@
-import React from 'react';
-import { CATEGORIES } from '../types';
+import React from "react";
+import { CATEGORIES } from "../types";
 
 interface ProductFiltersProps {
   selectedCategory: string;
@@ -18,7 +18,7 @@ const ProductFilters: React.FC<ProductFiltersProps> = ({
   onBrandChange,
   onPriceRangeChange,
 }) => {
-  const category = CATEGORIES.find(cat => cat.name === selectedCategory);
+  const category = CATEGORIES.find((cat) => cat.name === selectedCategory);
 
   return (
     <div className="space-y-6">
@@ -70,7 +70,9 @@ const ProductFilters: React.FC<ProductFiltersProps> = ({
             min="0"
             max="5000"
             value={priceRange[1]}
-            onChange={(e) => onPriceRangeChange([priceRange[0], parseInt(e.target.value)])}
+            onChange={(e) =>
+              onPriceRangeChange([priceRange[0], parseInt(e.target.value)])
+            }
             className="w-full"
           />
           <div className="flex justify-between text-sm text-gray-600">
