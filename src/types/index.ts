@@ -38,7 +38,7 @@ export const CATEGORIES: Category[] = [
   },
   {
     name: "Bajos",
-    subcategories: ["Fender", "Music Man", "Yamaha", "Warwick"],
+    subcategories: ["Fender", "Ibanez", "Yamaha", "Warwick"],
   },
   {
     name: "Baterías",
