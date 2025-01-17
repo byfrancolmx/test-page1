@@ -5,18 +5,24 @@ import { Product } from "../types";
 
 interface WishlistButtonProps {
   product: Product;
+  onClick?: (e: React.MouseEvent) => void;
 }
 
-const WishlistButton: React.FC<WishlistButtonProps> = ({ product }) => {
+const WishlistButton: React.FC<WishlistButtonProps> = ({
+  product,
+  onClick,
+}) => {
   const { state, dispatch } = useWishlist();
   const isInWishlist = state.items.some((item) => item.id === product.id);
 
-  const toggleWishlist = () => {
+  const toggleWishlist = (e: React.MouseEvent) => {
+    e.stopPropagation();
     if (isInWishlist) {
       dispatch({ type: "REMOVE_FROM_WISHLIST", payload: product.id });
     } else {
       dispatch({ type: "ADD_TO_WISHLIST", payload: product });
     }
+    onClick?.(e);
   };
 
   return (
@@ -33,3 +39,5 @@ const WishlistButton: React.FC<WishlistButtonProps> = ({ product }) => {
     </button>
   );
 };
+
+export default WishlistButton;
